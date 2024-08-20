@@ -12,10 +12,28 @@ Feature: Direct Ferries homepage
         Given I am on the homepage
         Then I see latest offers
 
-    Scenario: Tips and information appear
-        Given I am on the homepage
-        Then I see tips and information
+    # UK site
+    Scenario: Popular operators appear
+        Given I am on the UK homepage
+        Then I see popular operators
 
-    Scenario: Popular routes appear
-        Given I am on the homepage
-        Then I can see popular routes
+    Scenario: Top destinations appear
+        Given I am on the UK homepage
+        Then I see top destinations
+    
+    Scenario: Latest offers appear
+        Given I am on the UK homepage
+        Then I see latest offers
+
+    # IT site
+    Scenario: Popular operators appear
+        Given I am on the IT homepage
+        Then I see popular operators
+
+    Scenario: Top destinations appear
+        Given I am on the IT homepage
+        Then I see top destinations
+    
+    Scenario: Latest offers appear
+        Given I am on the IT homepage
+        Then I see latest offers

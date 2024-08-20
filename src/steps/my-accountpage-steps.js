@@ -1,11 +1,11 @@
 const { Given, When, Then } = require("@cucumber/cucumber");
 const myAccountPage = require("../methods/myaccountpage-methods.js");
 
-And('I enter incorrect details', async function () {
+Then ('I enter incorrect details', async function () {
     await myAccountPage.enterIncorrectDetails()
 })
 
-And ('I click manage my booking', async function () {
+Then ('I click manage my booking', async function () {
     await myAccountPage.clickManageBooking()
 })
 

@@ -5,10 +5,14 @@ const { t, Selector } = require("testcafe");
 Given('I am on the homepage', async function () {
     await navigation.onHomepage();
 });
-
-When ('I naviagate to my account page', async function () {
-    await t
-        .click(Selector('[id="accountUserAction"]'))
+Given('I am on the UK homepage', async function () {
+    await navigation.onUkHomepage();
+})
+Given('I am on the IT homepage', async function () {
+    await navigation.onItHomepage();
+})
+When ('I navigate to my account page', async function () {
+    await navigation.getMyAccountPage();
 })
 
 

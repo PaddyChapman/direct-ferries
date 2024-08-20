@@ -2,9 +2,11 @@ const { Selector, t } = require('testcafe');
 
 module.exports = {
     enterIncorrectDetails: async function () {
+        const emailInput = (Selector('[type="email"]'))
+        const bookingRefInput = (Selector('[name="BookingReference"]'))
         await t 
-            .typeText(Selector('[type="email"]', "randemail@google.com"))
-            .typeText(Selector('[name="BookingReference"]', "randomref123"))
+            .typeText(emailInput, 'randemail')
+            .typeText(bookingRefInput, 'randomref123')
     },
     clickManageBooking: async function () {
         await t

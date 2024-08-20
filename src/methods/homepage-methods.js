@@ -16,14 +16,4 @@ module.exports = {
         .expect(Selector('.df-dom-operators').exists).ok()
         .expect(await Selector('.df-dom-operators').find('.df-operator-img').count).gte(16)
     },
-    tipsAndInfoPresent: async function () {
-        await t
-            .expect(Selector('.class="df-dom-articles"').exists).ok()
-            .expect(Selector('.class="df-dom-articles"').find('.cdf-dom-full-card__news').count).gte(2)
-    },
-    popularRoutesPresent: async function () {
-        await t 
-        .expect(Selector('.class="df-dom-popular-routes"').exists).ok()
-        .expect(Selector('.class="df-dom-articles"').find('li').count).gte(16)    
-    }
 }
